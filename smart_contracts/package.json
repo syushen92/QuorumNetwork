@@ -1,0 +1,25 @@
+{
+  "name": "@consensys-software/smart_contracts",
+  "version": "1.0.0",
+  "description": "Example smart contracts for trying out Quorum",
+  "scripts": {
+    "compile": "node scripts/compile.js",
+    "deploy": "node scripts/deploy.cjs",
+    "public-transaction": "node scripts/public_tx.js",
+    "private-transaction": "node scripts/private_tx.js"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async-promise-pool": "^1.0.6",
+    "ethers": "^5.8.0",
+    "fs-extra": "^10.0.0",
+    "solc": "0.8.10",
+    "web3": "1.10.2",
+    "web3js-quorum": "22.4.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.26.3"
+  },
+  "type": "module"
+}
