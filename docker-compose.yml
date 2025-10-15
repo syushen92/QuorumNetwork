@@ -165,6 +165,7 @@ services:
   rpcnode: # provides public RPC interface for the network
     << : *quorum-def
     container_name: rpcnode
+    user: root
     ports:
       - 8545:8545/tcp # JSON-RPC
       - 8546:8546/tcp # websocket
@@ -183,7 +184,14 @@ services:
       - --nodiscover
       - --http
       - --http.addr=0.0.0.0
+      - --http.port=8545
       - --http.api=eth,net,web3,admin
+      - --http.corsdomain=*
+      - --http.vhosts=*
+      - --ws
+      - --ws.addr=0.0.0.0
+      - --ws.port=8546
+      - --ws.api=eth,net,web3,admin
       - --datadir=/config/keys
       - --permissioned
       - --permissions-config=/permissions/permissioned-nodes.json
@@ -191,6 +199,7 @@ services:
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.15
+      shared-net: {}
 
 
   # Tessera nodes for private transactions
@@ -399,6 +408,8 @@ services:
 
 
 networks:
+  shared-net:
+   external: true
   quorum-dev-quickstart:
     name: quorum-dev-quickstart
     driver: bridge
