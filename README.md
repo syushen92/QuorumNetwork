@@ -1,10 +1,15 @@
-# Quorum Dev Quickstart
+# QuorumNetwork
 
-Please go to our [official docs](https://consensys.net/docs/goquorum/en/latest/tutorials/quorum-dev-quickstart/)
+This repository contains the setup and configuration for a Quorum blockchain network.
 
+## 🏗️ Components
+- **Member Nodes (Quorum + Tessera)**: Run QBFT consensus with privacy support.
+- **RPC Node**: Provides JSON-RPC API access.
+- **Prometheus & Grafana**: For network metrics and visualization.
+- **Docker Compose**: Used to orchestrate all services in the network.
 
-## Moving to production
-
-When you are ready to move to production, please create new keys for your nodes using the
-[Quorum Genesis Tool](https://www.npmjs.com/package/quorum-genesis-tool) and read through the the
-[GoQuorum documentation](https://consensys.net/docs/goquorum/en/latest/deploy/install/)
+## 🚀 Getting Started
+```bash
+git clone https://github.com/syushen92/QuorumNetwork.git
+cd QuorumNetwork
+docker compose up -d
