@@ -21,3 +21,6 @@
 
 # Environment variables
 .env
+
+echo "logs/" >> .gitignore
+echo "package-lock.json" >> .gitignore

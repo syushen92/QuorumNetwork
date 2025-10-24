@@ -409,7 +409,8 @@ services:
 
 networks:
   shared-net:
-   external: true
+    name: shared-net
+    driver: bridge
   quorum-dev-quickstart:
     name: quorum-dev-quickstart
     driver: bridge
