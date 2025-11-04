@@ -19,25 +19,3 @@ const config = {
 };
 
 export default config;
-
-// import { HardhatUserConfig } from "hardhat/config";
-// import "@nomicfoundation/hardhat-toolbox-viem";
-// import * as dotenv from "dotenv";
-
-// dotenv.config();
-
-// const config: HardhatUserConfig = {
-//   solidity: "0.8.28",
-//   networks: {
-//     hardhat: { // 本地測試鏈
-//       type: "edr-simulated"
-//     },
-//     quorum: {
-//       type: "http", // Quorum 使用 HTTP RPC
-//       url: process.env.QUORUM_RPC_URL!,
-//       accounts: [process.env.QUORUM_PRIVATE_KEY!], // 用 dotenv 載入
-//     },
-//   },
-// };
-
-// export default config;
