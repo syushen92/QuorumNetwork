@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "compile": "npx hardhat compile",
-    "deploy": "npx hardhat run smart_contracts/scripts/deploy.js --network quorum"
+    "deploy": "npx hardhat run smart_contracts/scripts/deploy.js --network quorum",
+    "sync": "NETWORK=quorum ./sync-contracts.sh",
+    "release": "npm run compile && npm run deploy && npm run sync"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "3.1.0",
