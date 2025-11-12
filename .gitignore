@@ -22,5 +22,8 @@
 # Environment variables
 .env
 
+# contract address
+/build
+
 echo "logs/" >> .gitignore
 echo "package-lock.json" >> .gitignore
