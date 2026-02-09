@@ -211,7 +211,7 @@ services:
       - 9081:9080
     volumes:
       - ./config/nodes/member1:/config/keys
-      - ./logs/tessera:/var/log/tessera/
+      - ./logs/tessera:/var/cdata/logs/tessera/
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.26
@@ -255,7 +255,7 @@ services:
       - 9082:9080
     volumes:
       - ./config/nodes/member2:/config/keys
-      - ./logs/tessera:/var/log/tessera/
+      - ./logs/tessera:/var/cdata/logs/tessera/
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.27
@@ -299,7 +299,7 @@ services:
       - 9083:9080
     volumes:
       - ./config/nodes/member3:/config/keys
-      - ./logs/tessera:/var/log/tessera/
+      - ./logs/tessera:/var/cdata/logs/tessera/
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.28
