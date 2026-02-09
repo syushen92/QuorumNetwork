@@ -53,6 +53,8 @@ case "$me" in
     ;;
 esac
 
+: ${LOCK_FILE:="network.lock"}
+
 if [ "${NO_LOCK_REQUIRED}" = "true" ];then
   if [ -f ${LOCK_FILE} ];then
     echo "Network already in use (${LOCK_FILE} present)." >&2

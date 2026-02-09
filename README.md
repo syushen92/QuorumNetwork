@@ -1,15 +1,48 @@
 # QuorumNetwork
 
-This repository contains the setup and configuration for a Quorum blockchain network.
+This project provides a ready-to-use Quorum blockchain network with privacy (Tessera) and monitoring (Prometheus & Grafana), managed by Docker Compose and shell scripts.
 
-## 🏗️ Components
-- **Member Nodes (Quorum + Tessera)**: Run QBFT consensus with privacy support.
-- **RPC Node**: Provides JSON-RPC API access.
-- **Prometheus & Grafana**: For network metrics and visualization.
-- **Docker Compose**: Used to orchestrate all services in the network.
+## Project Structure
 
-## 🚀 Getting Started
+```
+.
+├── docker-compose.yml      # Main Compose config
+├── run.sh                  # Start the network
+├── stop.sh                 # Stop the network
+├── resume.sh               # Resume stopped containers
+├── remove.sh               # Remove all containers and data
+├── logs/                   # Node logs
+├── config/                 # Node keys and configs
+├── smart_contracts/        # Contracts and deployment scripts
+└── ...
+```
+
+## Requirements
+
+- Docker & Docker Compose
+- Bash
+
+## Quick Start
+
+Start the network with:
 ```bash
-git clone https://github.com/syushen92/QuorumNetwork.git
-cd QuorumNetwork
-docker compose up -d
+./run.sh
+```
+
+## Useful Commands
+
+| Command         | Description                  |
+| --------------- | --------------------------- |
+| `./run.sh`      | Start the network           |
+| `./stop.sh`     | Stop all services           |
+| `./resume.sh`   | Resume stopped containers   |
+| `./restart.sh`  | Restart the network         |
+| `./remove.sh`   | Remove all data and containers |
+| `./list.sh`     | Show service endpoints      |
+
+## Notes
+
+- All node data and logs are in `logs/` and `config/`.
+- If you encounter issues, try `./remove.sh` then `./run.sh` again.
+- Default RPC endpoint: [http://localhost:8545](http://localhost:8545)
+- For contract deployment and advanced usage, see the `smart_contracts/` folder.

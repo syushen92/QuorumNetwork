@@ -13,8 +13,10 @@ function loadJsonSafe(p) {
 }
 
 async function main() {
-    // deploy RecordStorage contract
+  
     const RecordStorage = await ethers.getContractFactory("RecordStorage");
+    
+    // deploy RecordStorage contract
     const recordStorage = await RecordStorage.deploy();
     const address = await recordStorage.getAddress();
     console.log("RecordStorage deployed to:", address);
