@@ -31,7 +31,7 @@ Start the network with:
 
 ## Useful Commands
 
-| Command         | Description                  |
+| Command         | Description                 |
 | --------------- | --------------------------- |
 | `./run.sh`      | Start the network           |
 | `./stop.sh`     | Stop all services           |
